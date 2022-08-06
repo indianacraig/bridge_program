@@ -1,6 +1,6 @@
 {
   "name": "Bridge Program Calculations",
-  "namespace": "MissionIndiana\\BridgeCalculationsClass",
+  "namespace": "MissionIndiana\\ExternalModule",
   "description": "This houses the calculations for the Bridge Program dashboard",
   "authors": [
     {

@@ -1,10 +1,10 @@
 <?php
-namespace MissionIndiana\BridgeCalculationsClass;
+namespace MissionIndiana\ExternalModule;
 
 use ExternalModules\AbstractExternalModule;
 use REDCapEntity\EntityDB;
 
-class BridgeCalculationsClass extends AbstractExternalModule {
+class ExternalModule extends AbstractExternalModule {
 
     function redcap_module_system_enable($version) {
         EntityDB::buildSchema($this->PREFIX);
