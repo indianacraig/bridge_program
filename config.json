@@ -1,0 +1,25 @@
+{
+  "name": "Bridge Program Calculations",
+  "namespace": "MissionIndiana\\BridgeCalculationsClass",
+  "description": "This houses the calculations for the Bridge Program dashboard",
+  "authors": [
+    {
+      "name": "Craig Greathouse",
+      "email": "craig@missionindiana.org",
+      "institution": "Mission Indiana"
+    }
+  ],
+  "framework-version": 10,
+  "permissions": [
+        "redcap_module_system_enable"
+  ],
+  "links": {
+    "control-center": [
+      {
+        "name": "Bridge Program Calculations",
+        "icon": "fas fa-calculator",
+        "url": "calculations.php"
+      }
+    ]
+  }
+}
