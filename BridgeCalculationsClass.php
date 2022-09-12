@@ -1,24 +1,23 @@
 <?php
-namespace MissionIndiana\ExternalModule;
+namespace MissionIndiana\BridgeCalculationsClass;
 
 use ExternalModules\AbstractExternalModule;
 use REDCapEntity\EntityDB;
 
-class ExternalModule extends AbstractExternalModule {
-
+class BridgeCalculationsClass extends AbstractExternalModule {
     function redcap_module_system_enable($version) {
-        \REDCapEntity\EntityDB::buildSchema($this->PREFIX);
+        EntityDB::buildSchema($this->PREFIX);
     }
 
     function redcap_entity_types() {
         $types = [];
 
-        $types['bridge_program_calculations'] = [
-            'label' => 'Bridge Program Calculation',
-            'label_plural' => 'Bridge Program Calculations',
+        $types['bridge'] = [
+            'label' => 'Bridge Calculation',
+            'label_plural' => 'Bridge Calculations',
             'icon' => 'home_pencil',
             'properties' => [
-                'adults_served' => [
+                'name' => [
                     'name' => 'Adults Served In Program',
                     'type' => 'integer',
                     'required' => false,
@@ -39,9 +38,9 @@ class ExternalModule extends AbstractExternalModule {
                     'required' => false,
                 ],
             ],
-            //'special_keys' => [
-            //    'label' => 'name', // "name" represents the entity label.
-            //],
+            'special_keys' => [
+                'label' => 'calc', // "name" represents the entity label.
+            ],
         ];
 
         return $types;
