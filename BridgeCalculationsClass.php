@@ -5,10 +5,7 @@ use ExternalModules\AbstractExternalModule;
 use REDCapEntity\EntityDB;
 
 class BridgeCalculationsClass extends AbstractExternalModule {
-    function redcap_module_system_enable($version) {
-        EntityDB::buildSchema($this->PREFIX);
-    }
-
+        
     function redcap_entity_types() {
         $types = [];
 
@@ -17,7 +14,7 @@ class BridgeCalculationsClass extends AbstractExternalModule {
             'label_plural' => 'Bridge Calculations',
             'icon' => 'home_pencil',
             'properties' => [
-                'name' => [
+                'adults_served' => [
                     'name' => 'Adults Served In Program',
                     'type' => 'integer',
                     'required' => false,
@@ -39,10 +36,15 @@ class BridgeCalculationsClass extends AbstractExternalModule {
                 ],
             ],
             'special_keys' => [
-                'label' => 'calc', // "name" represents the entity label.
+                'label' => 'name', // "name" represents the entity label.
             ],
         ];
 
         return $types;
     }
+    
+    //function redcap_module_system_enable($version) {
+    //    EntityDB::buildSchema($this->PREFIX);
+    //}
+
 }
