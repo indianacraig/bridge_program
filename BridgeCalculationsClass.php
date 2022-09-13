@@ -6,6 +6,10 @@ use REDCapEntity\EntityDB;
 
 class BridgeCalculationsClass extends AbstractExternalModule {
         
+    function redcap_module_system_enable($version) {
+        EntityDB::buildSchema($this->PREFIX);
+    }
+    
     function redcap_entity_types() {
         $types = [];
 
@@ -34,17 +38,18 @@ class BridgeCalculationsClass extends AbstractExternalModule {
                     'type' => 'integer',
                     'required' => false,
                 ],
+                'project_id' => [
+                    'name' => 'Project ID',
+                    'type' => 'project',
+                    'required' => true,
+                ],
             ],
             'special_keys' => [
-                'label' => 'name', // "name" represents the entity label.
+                'project' => 'project_id', // "project_id" represents the project which the entity belongs to.
             ],
         ];
 
         return $types;
     }
     
-    //function redcap_module_system_enable($version) {
-    //    EntityDB::buildSchema($this->PREFIX);
-    //}
-
 }

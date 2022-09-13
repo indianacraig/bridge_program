@@ -1,4 +1,5 @@
 <?php
+
 use REDCapEntity\EntityList;
 
 $list = new EntityList('bridge', $module);
