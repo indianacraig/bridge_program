@@ -10,9 +10,7 @@
     }
   ],
   "framework-version": 10,
-  "permissions": [
-        "redcap_module_system_enable"
-  ],
+  
   "links": {
     "control-center": [
       {
