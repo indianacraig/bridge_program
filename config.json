@@ -18,6 +18,13 @@
         "icon": "fas fa-calculator",
         "url": "calculations.php"
       }
+    ],
+    "project": [
+      {
+        "name": "Bridge Program Calculations",
+        "icon": "fas fa-calculator",
+        "url": "calculations.php"
+      }
     ]
   }
 }
