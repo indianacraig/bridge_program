@@ -1,10 +1,10 @@
 <?php
-namespace MissionIndiana\BridgeCalculationsClass;
+namespace MissionIndiana\bridgeCalculationsClass;
 
 use ExternalModules\AbstractExternalModule;
 use REDCapEntity\EntityDB;
 
-class BridgeCalculationsClass extends AbstractExternalModule {
+class bridgeCalculationsClass extends AbstractExternalModule {
         
     function redcap_entity_types() {
         $types = [];
